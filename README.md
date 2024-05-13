@@ -28,8 +28,10 @@ MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is
 Ensure that all dependencies are installed using pip:
 
 ```bash
-pip install numpy scipy scikit-image scikit-learn ants-python freesurfer
+pip install numpy scipy scikit-image scikit-learn ants-python
 ```
+
+ANTs and Freesurfer need to be installed separately. Please see the corresponding websites for instructions.
 
 ### Setup
 
