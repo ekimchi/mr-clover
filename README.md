@@ -1,5 +1,5 @@
 
-# MR-CLOVER: MRI Clinical Resolution Brain Volumetrics
+# MR-CLOVER: MRI CLinical resOlution brain VolumEtRics
 
 ## Description
 
