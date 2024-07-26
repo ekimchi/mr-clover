@@ -42,7 +42,7 @@ Clone the repository or download the source code from GitHub. No additional setu
 To use MR-CLOVER, prepare your MRI data in NIfTI format and run the tool from the command line. Here is a basic example:
 
 ```bash
-python mrclover.py -i path/to/input_image.nii -o path/to/output_mask.nii
+python mrclover.py -i path/to/input_image.nii.gz -o path/to/output_mask.nii.gz
 ```
 
 ### Command Line Arguments
@@ -59,7 +59,7 @@ python mrclover.py -i path/to/input_image.nii -o path/to/output_mask.nii
 ### Example
 
 ```bash
-python mrclover.py -i patient.nii -o gmwm_mask.nii --brain brain_mask.nii --icv icv_mask.nii --norm normalized.nii --bias bias_corrected.nii --stats volumes.csv
+python mrclover.py -i patient.nii.gz -o gmwm_mask.nii.gz --brain brain_mask.nii.gz --icv icv_mask.nii.gz --norm normalized.nii.gz --bias bias_corrected.nii.gz --stats volumes.csv
 ```
 
 ## Development
