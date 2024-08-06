@@ -249,7 +249,7 @@ def main(argv):
 	voxel_vol = np.prod(mi.spacing)
 	if np.any(mi.numpy()<0):
 		print("Some intensity values are negative. Please check input data (%s). Adjusting intensitise for now (+ min(intensities)). " %infile)
-		mi = mi.new_image_like(mi.numpy() + np.min(mi.numpy))
+		mi = mi.new_image_like(mi.numpy() + np.min(mi.numpy()))
 
 
 	#############
