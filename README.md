@@ -70,6 +70,13 @@ MR-CLOVER is an open-source project developed by MDS at Massachusetts General Ho
 
 For issues, suggestions, or contributions, please contact the lead developer.
 
+## Acknowledgements
+If you find this tool useful for your work, please cite 
+
+[1] Alhadid, Kenda, et al. "Brain volume is a better biomarker of outcomes in ischemic stroke compared to brain atrophy." arXiv preprint arXiv:2403.12788 (2024).
+
+as well as the relevant citations for ANTs and the Freesurfer packages Synthstrip and Synthseg.
+
 ## Version History
 
 - **0.2** (March 2024): Latest release with enhanced feature set and performance improvements compared to the tools found in WMHP.
