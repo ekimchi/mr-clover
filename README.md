@@ -3,7 +3,7 @@
 
 ## Description
 
-MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is a Python tool designed to extract the brain from clinical MRI scans and return segmented grey and white matter masks. It facilitates various MRI image processing tasks including bias field correction, brain extraction, intensity normalization, and intracranial volume segmentation using advanced computational methods.
+MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is a Python-based pipeline that combines publicly available tools from ANTs and Freesurfer to extract the brain from clinical MRI scans and return segmented grey and white matter masks. It facilitates various MRI image processing tasks, including bias field correction, brain extraction, intensity normalization, and intracranial volume segmentation using advanced computational methods.
 
 ## Features
 
