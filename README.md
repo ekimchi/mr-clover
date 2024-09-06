@@ -3,7 +3,11 @@
 
 ## Description
 
-MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is a Python tool designed to extract the brain from clinical MRI scans and return segmented grey and white matter masks. It facilitates various MRI image processing tasks including bias field correction, brain extraction, intensity normalization, and intracranial volume segmentation using advanced computational methods.
+MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is a Python-based pipeline that combines publicly available tools from ANTs and Freesurfer to extract the brain from clinical MRI scans and return segmented grey and white matter masks. It facilitates various MRI image processing tasks, including bias field correction, brain extraction, intensity normalization, and intracranial volume segmentation using advanced computational methods.
+
+This is what the pipeline looks like:
+
+![mr-clover pipeline](pipeline.jpg)
 
 ## Features
 
@@ -28,7 +32,7 @@ MR-CLOVER (Tool for Assessing MR-based Clinical resOlution brain VolumEtRics) is
 Ensure that all dependencies are installed using pip:
 
 ```bash
-pip install numpy scipy scikit-image scikit-learn ants-python
+pip install -r requirements.txt
 ```
 
 ANTs and Freesurfer need to be installed separately. Please see the corresponding websites for instructions.
@@ -69,6 +73,13 @@ MR-CLOVER is an open-source project developed by MDS at Massachusetts General Ho
 ## Contact
 
 For issues, suggestions, or contributions, please contact the lead developer.
+
+## Acknowledgements
+If you find this tool useful for your work, please cite 
+
+[1] Alhadid, Kenda, et al. "Brain volume is a better biomarker of outcomes in ischemic stroke compared to brain atrophy." arXiv preprint arXiv:2403.12788 (2024).
+
+as well as the relevant citations for ANTs and the Freesurfer packages Synthstrip and Synthseg.
 
 ## Version History
 
