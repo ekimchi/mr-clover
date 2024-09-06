@@ -249,7 +249,7 @@ def main(argv):
 	voxel_vol = np.prod(mi.spacing)
 	if np.any(mi.numpy()<0):
 		print("Some intensity values are negative. Please check input data (%s). Adjusting intensitise for now (+ min(intensities)). " %infile)
-		mi = mi.new_image_like(mi.numpy() + np.min(mi.numpy))
+		mi = mi.new_image_like(mi.numpy() + np.min(mi.numpy()))
 
 
 	#############
@@ -285,7 +285,10 @@ def main(argv):
 		brainfile=os.path.join(outdir, str(uuid.uuid4())+'.nii.gz')
 
 	if not os.path.isfile(brainfile):
-		call(["mri_synthstrip", "-i", biasfile, "-m", brainfile, '-g',"-b", str(0)])
+		if argv.gpu == True:
+			call(["mri_synthstrip", "-i", biasfile, "-m", brainfile, '-g',"-b", str(0)])
+		else:
+			call(["mri_synthstrip", "-i", biasfile, "-m", brainfile,"-b", str(0)])
 	mi_mask=ants.image_read(brainfile)
 	stats.append(["Brain_volume", "%f" %(voxel_vol*np.sum(mi_mask.numpy()>0))])
 
@@ -404,7 +407,7 @@ if __name__ == "__main__":
 		parser.add_option('--bias', dest='bias', help='Output bias field corrected brain image', metavar='FILE', default=None)
 		parser.add_option('--stats', dest='stats', help='Output stats file to save volumes and intensity normalization value', metavar='FILE', default=None)
 		parser.add_option('--sub', dest='sub', help='Subject ID to be saved in stats file. If none is given, use input file', metavar='FILE', default=None)
-
+		parser.add_option('--gpu', dest='gpu', help='Enable gpu acceleration for skull stripping. Requires Nvidia gpu with CUDA capability', metavar='BOOL', default=False, action="store_true")
 		(options, args) = parser.parse_args()
 	except:
 		sys.exit()
