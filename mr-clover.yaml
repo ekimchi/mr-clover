@@ -13,3 +13,6 @@ dependencies:
   - pip
   - pip:
     - antspyx==0.4.2
+
+# Followed by 
+# conda install conda-forge::ants
